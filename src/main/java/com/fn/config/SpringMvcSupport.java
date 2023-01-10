@@ -7,6 +7,9 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
+/**
+ * springboot整合mybatis和SSM
+ */
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
     @Autowired
