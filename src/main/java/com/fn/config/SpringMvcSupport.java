@@ -9,6 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 
 /**
  * springboot整合mybatis和SSM
+ * 123
  */
 @Configuration
 public class SpringMvcSupport extends WebMvcConfigurationSupport {
