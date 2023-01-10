@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:接口的全称
+    id:用于标识这一段的SQL语句
+    resultType:返回结果的类型,如查询结果返回String类型，就填String
+-->
+<mapper namespace="com.fn.dao.BookDao">
+    <insert id="save">
+        INSERT INTO tbl_book(type, name, description)
+        VALUES (#{type}, #{name}, #{description});
+    </insert>
+
+    <delete id="delete">
+        DELETE
+        FROM tbl_book
+        WHERE id = #{id};
+    </delete>
+
+    <update id="update">
+        UPDATE tbl_book
+        SET type=#{type},
+            name=#{name},
+            description=#{description}
+        WHERE id = #{id};
+    </update>
+
+    <select id="selectById" resultType="com.fn.domain.Book">
+        select *
+        FROM tbl_book
+        WHERE id = #{id};
+    </select>
+
+    <select id="selectAll" resultType="com.fn.domain.Book">
+        select *
+        from tbl_book;
+    </select>
+</mapper>
